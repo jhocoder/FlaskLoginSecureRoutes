@@ -3,6 +3,10 @@
 {% block title %} Home {% endblock %}
 
 {% block body %}
-<h1>bienvenidos</h1>
+<h1>bienvenidos {{ current_user.fullname }}</h1> 
+
+
+<a class="btn btn-secondary" href="{{ url_for('logout')}}">logout</a>
+
 {% endblock %}
 

@@ -29,8 +29,8 @@ class ModelUser():
     def get_by_id(cls, db, id):
         try:
             mycursor = db.connection.cursor()
-            sql = "SELECT *¿id, username, fullname FROM user WHERE id = %s"
-            
+            sql = "SELECT id, username, fullname FROM user WHERE id = %s"
+
             mycursor.execute(sql, (id,))
             row = mycursor.fetchone()
             
